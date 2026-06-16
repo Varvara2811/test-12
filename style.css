@@ -1,66 +1,33 @@
-/* .card{
-    width: 200px;
-    height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: aquamarine;
-    font-size: 30px;
-    transition-property: transform;
-    transition-duration: 800ms;
-
+.box{
+   width: 200px;
+   height: 200px;
+   outline: 1px solid red;
+   animation-name: moveInstent;
+   animation-duration: 1500ms;
+   animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+animation-iteration-count: infinite;
+animation-direction: alternate;
 }
-.card:hover{
-    transform: perspective(700px) rotateY(360deg);
-} */
- 
-/* .box{
-    display: flex;
-    gap: 30px;
-    perspective: 700px;
- }
- .card{
-    width: 200px;
-    height: 300px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color:rgb(255, 255, 255);
-    font-size: 30px;
-    transition-property: transform;
-    transition-duration: 500px;
- }
- .card:first-child{
-background-image: linear-gradient(pink, lightgreen);
- }
- .card:last-child{
-    background-image: linear-gradient(pink, orange);
- }
- .box:hover .card:first-child{
-    transform: rotateY(45deg);
- }
- .box:hover .card:last-child{
-    transform: rotateY(-45deg);
- } */
-  body{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-  }
-  .box{
-    perspective: 600px;
-    perspective-origin: center;
-  }
-  .card{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-width: 200px;
-height: 300px;
-border-radius: 10px;
-background:linear-gradient(pink, yellow) ;
-font-size: 40px;
-transform: rotateX(45deg);
-  }
+
+.images{
+   display: block;
+   width: 150px;
+   height: 150px;
+}
+@keyframes moveInstent {
+   0%{
+transform: translateX(0);
+   }
+   25%{
+      transform: scale(1.5);
+   }
+   50%{
+    opacity:0.5;
+    transform:scale(2);
+   
+   }
+   100%{
+transform: translateX(0);
+
+   }
+}
